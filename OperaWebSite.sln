@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperaWebSite", "OperaWebSit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCBook", "MVCBook\MVCBook.csproj", "{87C53454-CC3F-4B48-8D7B-306F73123919}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCClinica", "MVCClinica\MVCClinica.csproj", "{31D087EF-1156-4E05-9F3B-E5FE0ABD273A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{87C53454-CC3F-4B48-8D7B-306F73123919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C53454-CC3F-4B48-8D7B-306F73123919}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C53454-CC3F-4B48-8D7B-306F73123919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D087EF-1156-4E05-9F3B-E5FE0ABD273A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D087EF-1156-4E05-9F3B-E5FE0ABD273A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D087EF-1156-4E05-9F3B-E5FE0ABD273A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D087EF-1156-4E05-9F3B-E5FE0ABD273A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
