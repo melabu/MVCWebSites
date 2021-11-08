@@ -6,9 +6,12 @@ using System.Web.Mvc;
 using OperaWebSite.Models;
 using OperaWebSite.Data;
 using System.Data.Entity;
+using System.Diagnostics;
+using OperaWebSite.Filters;//add to use MyFilterAction
 
 namespace OperaWebSite.Controllers
 {
+    [MyFilterAction]
     public class OperaController : Controller
     {
         //dbcontext instance
@@ -124,5 +127,25 @@ namespace OperaWebSite.Controllers
             }
             return View("Edit", opera);
         }
+
+        //Filtro de acción - ANTES
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            //controller/action
+            //{controller}/{action}
+            //Opera/Create
+            var controller = filterContext.RouteData.Values["controller"];
+            var action = filterContext.RouteData.Values["action"];
+            Debug.WriteLine("Controller: " + controller + " Action:" + action + " Paso por OnActionExecuting");
+        }
+
+        //Filtro de acción - después
+        protected override void OnActionExecuted(ActionExecutedContext filterContext)
+        {
+            var controller = filterContext.RouteData.Values["controller"];
+            var action = filterContext.RouteData.Values["action"];
+            Debug.WriteLine("Controller: " + controller + " Action:" + action + " Paso por OnActionExecuted");
+        }
+
     }
 }
