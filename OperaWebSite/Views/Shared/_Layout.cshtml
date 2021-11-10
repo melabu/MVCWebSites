@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="img-teatro">
+        </div>
+        <div class="login-container">
+            <h2>LOGIN</h2>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">INICIO</a>
+            </li>
+            <li>
+                <a href="#">OPERA</a>
+            </li>
+            <li>
+                <a href="#">EMPLEADO</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside class="izq">
+            @if (IsSectionDefined("izq"))
+            {
+                @RenderSection("izq")
+            }
+            else
+            {
+            <h2>DIRECCION:  Campo S. Fantin, 1965, 30124 Venezia VE, Italia</h2>
+                <h2>TELEFONO: + 39 041 786654</h2>
+            }
+        </aside>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <aside class="der">
+            @if (IsSectionDefined("der"))
+            {
+                @RenderSection("der")
+            }
+            else
+            {
+                <img src="~/Images/fenice2.jpg" />
+                <img src="~/Images/fenice3.jpg" />
+                <img src="~/Images/fenice4.jpg" />
+            }
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>mailito@opera.com</p>
+    </footer>
+</body>
+</html>

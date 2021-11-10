@@ -13,6 +13,7 @@ namespace OperaWebSite.Controllers
         [MyFilterAction]
         public ActionResult Index()
         {
+            ViewBag.Fecha = DateTime.Now;
             return View();
         }
 
